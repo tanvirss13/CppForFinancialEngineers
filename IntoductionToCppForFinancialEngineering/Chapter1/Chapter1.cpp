@@ -19,8 +19,8 @@ int main() {
 	cout << "The number is " << i << endl;
 
 	int k = 10;
-	int rtn = tripleAnInteger(k);
-	cout << "tripleAnInteger(" << k << ") = " << rtn << endl;
+	int rtn = tripleInteger(k);
+	cout << "tripleInteger(" << k << ") = " << rtn << endl;
 	cout << endl;
 
 	return 0;
@@ -36,7 +36,7 @@ double twice(double x) {
 	return 2.0 * x;
 }
 
-int tripleAnInteger(int k) {
+int tripleInteger(int k) {
 	int m = 3 * k;
 	return m;
 }
