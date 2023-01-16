@@ -4,6 +4,7 @@ using namespace std;
 
 double addAndSubtract(double x, double y, double z);
 double twice(double x);
+int tripleInteger(int k);
 
 int main() {
 	cout << "Hello World!" << endl;
