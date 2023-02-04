@@ -18,7 +18,7 @@ int main() {
 	cin >> underlying;
 
 
-	if (porc == "CALL") {
+	if (porc == "CALL" || porc == "call" || porc == "Call") {
 		cout << "This is a call option." << endl;
 		if (underlying > strike) {
 			cout << "Option is in the money." << endl;
@@ -27,7 +27,7 @@ int main() {
 			cout << "Option is out of the money." << endl;
 		}
 	}
-	else if (porc == "PUT") {
+	else if (porc == "PUT" || porc == "put" || porc == "Put") {
 		cout << "This is a put option." << endl;
 		if (underlying <= strike) {
 			cout << "Option is in the money." << endl;
