@@ -14,6 +14,10 @@ int main() {
 	int max_1 = 10;
 	int min_2;
 	int max_2 = 20;
+	int localMax = 5;
+	int innerMax = 5;
+	int outerMax = 10;
+
 
 	cout << "Prefix increment ++i; i is now " << ++i << endl;
 	cout << i << endl;
@@ -45,6 +49,34 @@ int main() {
 
 	for (int min_2 = 15; min_2 < max_2; ++min_2) {
 		cout << min_2 << ", ";
+	}
+
+	cout << endl;
+
+	for (int i = 0; i < max; ++i) {
+		cout << i << ", ";
+		if (i > localMax) {
+			cout << "Passed i = " << localMax << "; I'm tired, so let's go home." << endl;
+			break;
+		}
+	}
+
+	cout << endl;
+
+	for (int k = 0; k < max; k++) {
+		cout << k << ", ";
+		if (k > max / 2) {
+			cout << "Reached k = " << localMax / 2 << "; keep on going." << endl;
+
+			continue;
+		}
+	}
+
+	while (i < outerMax) {
+		for (j = 0; j < innerMax; ++j) {
+			cout << i * j << ", ";
+		}
+		++i;
 	}
 
 	
