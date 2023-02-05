@@ -10,6 +10,10 @@ int main() {
 	int x_0 = 0;
 	int min = 10;
 	int max = 20;
+	int min_1 = 0;
+	int max_1 = 10;
+	int min_2;
+	int max_2 = 20;
 
 	cout << "Prefix increment ++i; i is now " << ++i << endl;
 	cout << i << endl;
@@ -29,9 +33,19 @@ int main() {
 
 	while (min < max) {
 		cout << min << ", ";
-		min++;
+		++min;
 	}
+	cout << endl;
 
+	do {
+		cout << min_1 << ", ";
+		++min_1;
+	} while (min_1 < max_1);
+	cout << endl;
+
+	for (int min_2 = 15; min_2 < max_2; ++min_2) {
+		cout << min_2 << ", ";
+	}
 
 	
 	return 0;
