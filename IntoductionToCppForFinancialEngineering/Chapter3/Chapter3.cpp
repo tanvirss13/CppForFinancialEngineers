@@ -17,6 +17,8 @@ int main() {
 	int localMax = 5;
 	int innerMax = 5;
 	int outerMax = 10;
+	int m = 0;
+	int n = 0;
 
 
 	cout << "Prefix increment ++i; i is now " << ++i << endl;
@@ -72,11 +74,11 @@ int main() {
 		}
 	}
 
-	while (i < outerMax) {
-		for (j = 0; j < innerMax; ++j) {
-			cout << i * j << ", ";
+	while (m < outerMax) {
+		for (n = 0; n < innerMax; ++n) {
+			cout << m * n << ", ";
 		}
-		++i;
+		++m;
 	}
 
 	
