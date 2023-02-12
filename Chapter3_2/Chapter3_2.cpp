@@ -144,4 +144,25 @@ int main()
     return 0;
 
 
+    enum class n_FOOTBALL {
+        n_QUARTERBACK, n_CENTER, n_TIGHT_END, n_WIDE_RECEIVER, n_RUNNING_BACK
+    };
+
+    enum class n_BASEBALL {
+        n_PITCHER, n_CATCHER, n_FIRST_BASEMAN, n_SECOND_BASEMAN, n_THIRD_BASEMAN
+    };
+
+// This won't compile as the operator '==' is only defined for same types 
+ //   if (n_FOOTBALL::n_TIGHT_END == n_BASEBALL::n_FIRST_BASEMAN) {
+ //       cout << "TIGHT_END_n == FIRST_BASEMAN_n is true" << endl;
+ //   }
+
+    Baseball p = PITCHER;
+    n_FOOTBALL qb = n_FOOTBALL::n_QUARTERBACK;
+    string qbStr = "QUARTERBACK";
+
+    cout << "size of enum bb = " << sizeof(p) << endl;
+    cout << "size of class enum qb = " << sizeof(qb) << endl;
+    cout << "size of qbStr = " << sizeof(qbStr) << endl;
+
 }
