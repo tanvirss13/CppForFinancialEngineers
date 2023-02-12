@@ -10,6 +10,51 @@ enum OptionTypes {
     ASIAN,
 };
 
+enum Football {
+    QUARTERBACK,
+    CENTER,
+    TIGHT_END,
+    WIDE_RECEIVER,
+    RUNNING_BACK
+};
+
+
+enum Baseball {
+    PITCHER,
+    CATCHER,
+    FIRST_BASEMAN,
+    SECOND_BASEMAN,
+    THIRD_BASEMAN
+};
+
+
+enum Football_new {
+    QUARTERBACK_n = 1,
+    CENTER_n,
+    TIGHT_END_n,
+    WIDE_RECEIVER_n,
+    RUNNING_BACK_n
+};
+
+enum Baseball_new {
+    PITCHER_n = 6,
+    CATCHER_n,
+    FIRST_BASEMAN_n,
+    SECOND_BASEMAN_n,
+    THIRD_BASEMAN_n
+};
+
+
+enum class n_FOOTBALL {
+    n_QUARTERBACK, n_CENTER, n_TIGHT_END, n_WIDE_RECEIVER, n_RUNNING_BACK
+};
+
+enum class n_BASEBALL {
+    n_PITCHER, n_CATCHER, n_FIRST_BASEMAN, n_SECOND_BASEMAN, n_THIRD_BASEMAN
+};
+
+
+
 int main()
 {
     cout << "EUROPEAN = " << EUROPEAN << endl;
@@ -18,11 +63,11 @@ int main()
     cout << "ASIAN = " << ASIAN << endl;
 
     cout << endl;
-    
+
     OptionTypes ot;
     ot = AMERICAN;
 
-    
+
     if (ot == EUROPEAN) {
         cout << "EUROPEAN: Use Black-Scholes" << endl;
     }
@@ -61,23 +106,6 @@ int main()
     }
 
 
-    enum Football {
-            QUARTERBACK,
-            CENTER,
-            TIGHT_END,
-            WIDE_RECEIVER,
-            RUNNING_BACK
-    };
-
-
-    enum Baseball {
-        PITCHER,
-        CATCHER,
-        FIRST_BASEMAN,
-        SECOND_BASEMAN,
-        THIRD_BASEMAN
-    };
-
     Football fb = TIGHT_END;
     Baseball bb = FIRST_BASEMAN;
 
@@ -86,22 +114,6 @@ int main()
     }
 
 
-
-    enum Football_new {
-        QUARTERBACK_n = 1,
-        CENTER_n,
-        TIGHT_END_n,
-        WIDE_RECEIVER_n,
-        RUNNING_BACK_n
-    };
-
-    enum Baseball_new {
-        PITCHER_n = 6,
-        CATCHER_n,
-        FIRST_BASEMAN_n,
-        SECOND_BASEMAN_n,
-        THIRD_BASEMAN_n
-    };
 
     Football_new n_fb = TIGHT_END_n;
     Baseball_new n_bb = FIRST_BASEMAN_n;
@@ -114,13 +126,7 @@ int main()
         cout << "FIRST_BASEMAN = " << FIRST_BASEMAN_n << endl;
     }
 
-    enum class n_FOOTBALL {
-        n_QUARTERBACK, n_CENTER, n_TIGHT_END, n_WIDE_RECEIVER, n_RUNNING_BACK
-    };
 
-    enum class n_BASEBALL {
-        n_PITCHER, n_CATCHER, n_FIRST_BASEMAN, n_SECOND_BASEMAN, n_THIRD_BASEMAN
-    };
 
     // This won't compile as the operator '==' is only defined for same types 
      //   if (n_FOOTBALL::n_TIGHT_END == n_BASEBALL::n_FIRST_BASEMAN) {
